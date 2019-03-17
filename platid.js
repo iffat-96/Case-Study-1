@@ -10,6 +10,7 @@ let log = console.log;
 //let platid = [123,456,789,110,120,130,140];
 
 
+
 //time_arrived
 //in hours
 //aku buat 2: satu string, satu int
@@ -40,9 +41,9 @@ let platid = [{"id":123, "time_arrived":"8:00", "time_remaining":"30_minutes", "
 
 //sort by time_arrival and platid
 let sortedplatid = platid.sort ( (a,b) => {
-    if(a.platid > b.platid)
+    if(a.time_arrived < b.time_arrived)
         return 1;
-    else if(b.platid > a.platid)
+    else if(b.time_arrived > a.time_arrived)
         return -1;
 });
 log(sortedplatid);
